@@ -11,7 +11,12 @@ part1 = prod(submarine.trackPosition(data))
 
 
 # Solve Part 2
-part2 = prod(submarine.trackCorrectPosition(data))
+sub = submarine.Submarine()
+sub.trackPosition(data)
+part2 = prod(sub.getPosition()[:-1]) # prod only x and depth (x,depth,aim)
+
+# Original part2:
+# part2 = prod(submarine.trackCorrectPosition(data))
 
 
 # Output answers
