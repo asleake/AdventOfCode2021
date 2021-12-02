@@ -6,14 +6,16 @@ data = getInputFromFile('data/'+getFileName(__file__)+'.input')
 
 
 # Solve Part 1
-part1 = sonar.measureIncreasingDepth([int(depth) for depth in data],1)
+def FirstPart():
+    """ Find which depth readings increase over the previous value """
+    return sonar.measureIncreasingDepth([int(depth) for depth in data],1)
 
 
 # Solve Part 2
-part2 = sonar.measureIncreasingDepth([int(depth) for depth in data],3)
+def SecondPart():
+    """ Find which depth readings increase over the previous 3 values """
+    return sonar.measureIncreasingDepth([int(depth) for depth in data],3)
 
 
 # Output answers
-print('Part 1:\n'+str(part1))
-print('\n\n')
-print('Part 2:\n'+str(part2))
+print("First Puzzle Answer:\t{}\nSecond Puzzle Answer:\t{}\n".format(FirstPart(),SecondPart()))

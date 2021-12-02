@@ -7,19 +7,21 @@ data = getInputFromFile('data/'+getFileName(__file__)+'.input')
 
 
 # Solve Part 1
-part1 = prod(submarine.trackPosition(data))
+def FirstPart():
+    """ Track the position of a submarine given forward, up, and down commands """
+    return prod(submarine.trackPosition(data))
 
 
 # Solve Part 2
-sub = submarine.Submarine()
-sub.trackPosition(data)
-part2 = prod(sub.getPosition()[:-1]) # prod only x and depth (x,depth,aim)
+def SecondPart():
+    """ Track the position of a submarine given forward and aim (up, down) commands """
+    sub = submarine.Submarine()
+    sub.trackPosition(data)
+    return prod(sub.getPosition()[:-1]) # prod only x and depth (x,depth,aim)
 
-# Original part2:
-# part2 = prod(submarine.trackCorrectPosition(data))
+    # Original part2:
+    # return prod(submarine.trackCorrectPosition(data))
 
 
 # Output answers
-print('Part 1:\n'+str(part1))
-print('\n\n')
-print('Part 2:\n'+str(part2))
+print("First Puzzle Answer:\t{}\nSecond Puzzle Answer:\t{}\n".format(FirstPart(),SecondPart()))
