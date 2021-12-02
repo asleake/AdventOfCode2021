@@ -13,6 +13,6 @@ part2 = 'This is not the answer yet.'
 
 
 # Output answers
-print('Part 1:\n'+part1)
+print('Part 1:\n'+str(part1))
 print('\n\n')
-print('Part 2:\n'+part2)
+print('Part 2:\n'+str(part2))
