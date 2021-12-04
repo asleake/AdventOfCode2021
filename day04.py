@@ -1,23 +1,19 @@
 from utils.import_data import getFileName,getInputFromFile
-from utils import submarine
 
 data = getInputFromFile('data/'+getFileName(__file__)+'.input')
 
-sub = submarine.Submarine()
+
 
 # Solve Part 1
 def FirstPart():
     """ Find ... """
-
-    sub.calculateDiagnostic(data)
-    return sub.gamma*sub.epsilon
+    return 'This is not the answer yet.'
 
 
 # Solve Part 2
 def SecondPart():
     """ Find ... """
-    sub.calculateLifeSupportRating(data)
-    return sub.oxygenRating*sub.co2Rating
+    return 'This is not the answer yet.'
 
 
 # Output answers
